@@ -77,3 +77,5 @@ venv/
 Assets/ML-Agents/MLAgents_FlappyBird/
 Assets/Plugins/CodeMonkey/Assets
 _Builds/
+
+.idea/
