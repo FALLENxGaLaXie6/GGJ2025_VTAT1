@@ -3,25 +3,21 @@ using UnityEngine;
 public class VacuumRotationCorrector : MonoBehaviour
 {
 
-    private AreaEffector2D areaEffector;
+public float vacuumForce = 40f; // Adjust the strength of the vacuum force
+    [SerializeField] private Transform cupTransform; // Reference to the cup's transform
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void OnTriggerStay2D(Collider2D other)
     {
-        areaEffector = GetComponent<AreaEffector2D>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (areaEffector != null)
+        // Ensure the object has a Rigidbody2D
+        if (other.attachedRigidbody != null)
         {
-            // Update the Force Angle to match the parent's rotation
-            float parentRotation = transform.eulerAngles.z; // Z-axis rotation
-            areaEffector.forceAngle = parentRotation-180;
-            
-            Debug.Log($"Parent Rotation (Z): {parentRotation}");
-            Debug.Log($"Force Angle Applied: {areaEffector.forceAngle}");
+            // Calculate the direction towards the cup
+            Vector2 directionToCup = (Vector2)(cupTransform.position - other.transform.position);
+            directionToCup.Normalize();
+
+            // Apply a force towards the cup
+            other.attachedRigidbody.AddForce(directionToCup * vacuumForce);
         }
     }
+
 }
