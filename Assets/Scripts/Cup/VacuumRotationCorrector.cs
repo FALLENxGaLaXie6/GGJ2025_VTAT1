@@ -8,8 +8,8 @@ public float vacuumForce = 40f; // Adjust the strength of the vacuum force
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        // Ensure the object has a Rigidbody2D
-        if (other.attachedRigidbody != null)
+        // Ensure the object has a Rigidbody2D and Mouse is clicked
+        if (other.attachedRigidbody != null && Input.GetMouseButton(0))
         {
             // Calculate the direction towards the cup
             Vector2 directionToCup = (Vector2)(cupTransform.position - other.transform.position);
