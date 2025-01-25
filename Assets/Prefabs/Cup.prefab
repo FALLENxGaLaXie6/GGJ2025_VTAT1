@@ -73,8 +73,8 @@ Transform:
   m_GameObject: {fileID: 2386939674404334011}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.06, y: 7.95, z: 0}
-  m_LocalScale: {x: 15.161399, y: 12.077366, z: 0}
+  m_LocalPosition: {x: 0.06, y: 13.28, z: 0}
+  m_LocalScale: {x: 13.298559, y: 22.548443, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6659112374404443828}
@@ -180,8 +180,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5773587}
+    - - {x: 0.32125494, y: 0.092639334}
+      - {x: 0.14859617, y: 0.46096173}
+      - {x: 0, y: 0.511536}
+      - {x: -0.14041126, y: 0.45589978}
       - {x: -0.5, y: -0.28866667}
+      - {x: -0.20969765, y: -0.28018233}
+      - {x: 0.011645442, y: -0.28173807}
+      - {x: 0.23665205, y: -0.28281435}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
 --- !u!114 &5131754132932249885
@@ -196,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf742aa22b0267478518f2c41bb8a75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vacuumForce: 10
+  vacuumForce: 50
   cupTransform: {fileID: 527451822934418759}
 --- !u!1 &4056142144490103774
 GameObject:
