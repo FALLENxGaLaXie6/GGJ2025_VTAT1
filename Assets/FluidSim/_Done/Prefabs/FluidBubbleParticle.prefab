@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4818930522384179435}
   - component: {fileID: 7466772362424768146}
   - component: {fileID: 6945116756252542284}
-  m_Layer: 6
-  m_Name: FluidParticle
+  m_Layer: 8
+  m_Name: FluidBubbleParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b53c224115e48e74b8f694e66f361749, type: 3}
-  m_Color: {r: 0, g: 0.9582813, b: 1, a: 1}
+  m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -497,6 +497,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxMoveSpeed: 25
   maxDistance: 10
-  maxRotationSpeed: 720
+  maxRotationSpeed: 2500
   maxRotationDistance: 180
-  maxRotationAngle: 90
+  maxRotationAngle: 180

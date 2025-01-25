@@ -12,7 +12,7 @@ namespace Faucet
     public class DropletSpawning : MonoBehaviour
     {
         [ListDrawerSettings(ShowFoldout = true, DraggableItems = true, ShowIndexLabels = true)] [SerializeField]
-        private List<ParticleType> possibleParticleTypes;
+        private List<ParticleTypeData> possibleParticleTypes;
 
         [SerializeField] private Transform spawnPoint;
         [SerializeField] private GameObject dropletPrefab;
@@ -74,7 +74,6 @@ namespace Faucet
             while (true)
             {
                 // Spawn the object
-                GameObject droplet = Instantiate(dropletPrefab, spawnPoint.position, spawnPoint.rotation);
 
                 float randomAngle = Random.Range(-coneAngle / 2f, coneAngle / 2f);
                 float radians = randomAngle * Mathf.Deg2Rad;
@@ -84,13 +83,15 @@ namespace Faucet
                 float forceVariation = Random.Range(0.2f, 1.8f); // ±20% variation
                 float adjustedForce = forceAmount * forceVariation;
 
+                ParticleTypeData particleTypeData = possibleParticleTypes[Random.Range(0, possibleParticleTypes.Count)];
+                GameObject droplet = particleTypeData.SpawnParticle(spawnPoint.position, spawnPoint.rotation);
+
                 Rigidbody2D rbComponent = droplet.GetComponent<Rigidbody2D>();
                 if (rbComponent) rbComponent.AddForce(randomDirection * adjustedForce, ForceMode2D.Impulse);
 
                 FluidParticle fluidParticle = droplet.GetComponent<FluidParticle>();
 
-                ParticleType particleType = possibleParticleTypes[Random.Range(0, possibleParticleTypes.Count)];
-                if (fluidParticle) fluidParticle.SetParticleType(particleType);
+                if (fluidParticle) fluidParticle.SetParticleType(particleTypeData);
 
                 // Start a coroutine to destroy the particle after its lifetime
                 StartCoroutine(DestroyAfterLifetime(droplet, particleLifetime));

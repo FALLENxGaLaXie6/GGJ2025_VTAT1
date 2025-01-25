@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: IPA Beer
   m_EditorClassIdentifier: 
   <Color>k__BackingField: {r: 0.5471698, g: 0.4362576, b: 0.30713776, a: 1}
+  <FluidParticle>k__BackingField: {fileID: 4776170243888690176, guid: 8f72120b263de454f882e7bc1ae4ec30, type: 3}

@@ -132,6 +132,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b1e6a6de94540f5b2c8c90add37397e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  possibleParticleTypes:
+  - {fileID: 11400000, guid: 58891dc714dd1444484afe5236008019, type: 2}
+  - {fileID: 11400000, guid: b531905b1d8a75945ba1113a27d62d14, type: 2}
+  - {fileID: 11400000, guid: 138e177ee752216409ef3a005c7e86e7, type: 2}
   spawnPoint: {fileID: 3331371795059950996}
   dropletPrefab: {fileID: 4776170243888690176, guid: 6b5fa69c302ad1246ac813357dd93e97, type: 3}
   spawnInterval: 0.05

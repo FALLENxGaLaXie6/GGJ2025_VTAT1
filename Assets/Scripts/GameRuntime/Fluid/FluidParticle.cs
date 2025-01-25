@@ -8,8 +8,8 @@ namespace GameRuntime.Fluid
     public class FluidParticle : MonoBehaviour
     {
         private static readonly int Color1 = Shader.PropertyToID("_Color");
-        [InlineEditor] [field: SerializeField] private ParticleType DefaultParticleType { get; set; }
-        private ParticleType ParticleType { get; set; }
+        [InlineEditor] [field: SerializeField] private ParticleTypeData DefaultParticleTypeData { get; set; }
+        private ParticleTypeData ParticleTypeData { get; set; }
 
         private SpriteRenderer _SpriteRenderer;
 
@@ -21,20 +21,20 @@ namespace GameRuntime.Fluid
         private void Start()
         {
             // Set the particle type to the default type if none is provided
-            ParticleType = DefaultParticleType;
+            ParticleTypeData = DefaultParticleTypeData;
         }
 
-        public void SetParticleType(ParticleType newParticleType)
+        public void SetParticleType(ParticleTypeData newParticleTypeData)
         {
-            ParticleType = newParticleType;
+            ParticleTypeData = newParticleTypeData;
             UpdateParticleColor();
         }
 
         private void UpdateParticleColor()
         {
-            _SpriteRenderer.color = ParticleType.Color;
+            _SpriteRenderer.color = ParticleTypeData.Color;
             Material material = _SpriteRenderer.material;
-            material.SetColor(Color1, ParticleType.Color);
+            material.SetColor(Color1, ParticleTypeData.Color);
         }
     }
 }

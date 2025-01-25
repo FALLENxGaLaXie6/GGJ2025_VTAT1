@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   <Color>k__BackingField: {r: 0.21226418, g: 0.21226418, b: 1, a: 1}
+  <FluidParticle>k__BackingField: {fileID: 4776170243888690176, guid: 6b5fa69c302ad1246ac813357dd93e97, type: 3}
