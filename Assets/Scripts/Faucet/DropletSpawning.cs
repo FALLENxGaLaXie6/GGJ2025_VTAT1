@@ -1,4 +1,8 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+using GameRuntime.Fluid;
+using Scriptable_Objects;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -7,6 +11,9 @@ namespace Faucet
 {
     public class DropletSpawning : MonoBehaviour
     {
+        [ListDrawerSettings(ShowFoldout = true, DraggableItems = true, ShowIndexLabels = true)] [SerializeField]
+        private List<ParticleType> possibleParticleTypes;
+
         [SerializeField] private Transform spawnPoint;
         [SerializeField] private GameObject dropletPrefab;
         [SerializeField] float spawnInterval = 0.2f; // Interval in seconds
@@ -14,7 +21,6 @@ namespace Faucet
 
         [SerializeField] float forceAmount = 10f; // Amount of force to apply
         [SerializeField] float coneAngle = 30f; // Angle of the cone in degrees
-
 
         private InputActions _InputActions;
         private Coroutine _SpawnCoroutine;
@@ -80,6 +86,11 @@ namespace Faucet
 
                 Rigidbody2D rbComponent = droplet.GetComponent<Rigidbody2D>();
                 if (rbComponent) rbComponent.AddForce(randomDirection * adjustedForce, ForceMode2D.Impulse);
+
+                FluidParticle fluidParticle = droplet.GetComponent<FluidParticle>();
+
+                ParticleType particleType = possibleParticleTypes[Random.Range(0, possibleParticleTypes.Count)];
+                if (fluidParticle) fluidParticle.SetParticleType(particleType);
 
                 // Start a coroutine to destroy the particle after its lifetime
                 StartCoroutine(DestroyAfterLifetime(droplet, particleLifetime));

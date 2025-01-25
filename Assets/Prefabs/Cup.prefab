@@ -400,6 +400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1744477734218625833}
   - component: {fileID: 7999709311559964561}
+  - component: {fileID: 8039305941532184379}
   m_Layer: 0
   m_Name: Cup
   m_TagString: Untagged
@@ -482,3 +483,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8039305941532184379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7176446960580365302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afa984ffc2daefc47b8fc92bdb3b29bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxMoveSpeed: 25
+  maxDistance: 10
+  maxRotationSpeed: 720
+  maxRotationDistance: 180
+  maxRotationAngle: 90
