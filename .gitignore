@@ -78,4 +78,7 @@ Assets/ML-Agents/MLAgents_FlappyBird/
 Assets/Plugins/CodeMonkey/Assets
 _Builds/
 
+# Ignore everything under Sirenix directory
+Assets/Plugins/Sirenix/
+
 .idea/
