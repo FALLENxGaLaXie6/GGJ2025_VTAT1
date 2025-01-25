@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1, y: 6.2, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -140,8 +140,8 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0
-  m_GravityScale: 3
-  m_Material: {fileID: 6200000, guid: a688f3b6fcaa8a64ba06f72cf60a07cb, type: 2}
+  m_GravityScale: 0.05
+  m_Material: {fileID: 6200000, guid: f5be49c88c8378343a9b802a8d551d5c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

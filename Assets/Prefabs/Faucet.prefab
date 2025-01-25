@@ -397,5 +397,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 1466304771491821190}
-  dropletPrefab: {fileID: 5365892128327961990, guid: af6b875c279b9d34e988da78aeaaf01f, type: 3}
+  dropletPrefab: {fileID: 4776170243888690176, guid: 6b5fa69c302ad1246ac813357dd93e97, type: 3}
   spawnInterval: 0.2
+  particleLifetime: 15
