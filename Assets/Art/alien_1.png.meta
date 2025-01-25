@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 09e9c243d76ea4ca48b52ba72bd22c30
+guid: 55858e090e01f48218cd7421cf5ae5c6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7811560079457615585
-    second: spout_1 1_0
+      213: -7725696032364351910
+    second: alien_1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spout_1 1_0
+      name: alien_1_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 1
-        width: 44
-        height: 127
+        x: 13
+        y: 0
+        width: 40
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ee71bd318c386c60800000000000000
-      internalID: 7811560079457615585
+      spriteID: a5e274c1460d8c490800000000000000
+      internalID: -7725696032364351910
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      spout_1 1_0: 7811560079457615585
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
