@@ -5,7 +5,6 @@ using Scriptable_Objects;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 namespace Faucet
 {
@@ -21,6 +20,7 @@ namespace Faucet
 
         [SerializeField] float forceAmount = 10f; // Amount of force to apply
         [SerializeField] float coneAngle = 30f; // Angle of the cone in degrees
+        [SerializeField] float baseAngleOffset = -15f; // Base angle offset for the faucet direction
 
         private InputActions _InputActions;
         private Coroutine _SpawnCoroutine;
@@ -30,7 +30,6 @@ namespace Faucet
             // Initialize the InputActions
             _InputActions = new InputActions();
         }
-
 
         private void OnEnable()
         {
@@ -42,13 +41,12 @@ namespace Faucet
             _InputActions.Faucet.SpewWater.canceled += OnSpewWaterButtonReleased;
         }
 
-
         private void OnDisable()
         {
             // Disable the InputActions
             _InputActions.Disable();
 
-            // Subscribe to the button hold action
+            // Unsubscribe from the button hold action
             _InputActions.Faucet.SpewWater.started -= OnSpewWaterButtonPressed;
             _InputActions.Faucet.SpewWater.canceled -= OnSpewWaterButtonReleased;
         }
@@ -62,38 +60,40 @@ namespace Faucet
         private void OnSpewWaterButtonReleased(InputAction.CallbackContext obj)
         {
             // Stop spawning objects
-            if(_SpawnCoroutine == null) return;
+            if (_SpawnCoroutine == null) return;
 
             StopCoroutine(_SpawnCoroutine);
             _SpawnCoroutine = null;
-
         }
 
         private IEnumerator SpawnObjects()
         {
             while (true)
             {
-                // Spawn the object
-
-                float randomAngle = Random.Range(-coneAngle / 2f, coneAngle / 2f);
+                // Calculate a random angle within the cone, offset by the base angle
+                float randomAngle = Random.Range(-coneAngle / 2f, coneAngle / 2f) + baseAngleOffset;
                 float radians = randomAngle * Mathf.Deg2Rad;
+
+                // Calculate the random direction based on the angle
                 Vector2 randomDirection = new Vector2(Mathf.Sin(radians), -Mathf.Cos(radians)).normalized;
 
                 // Generate a random multiplier for the force amount
-                float forceVariation = Random.Range(0.2f, 1.8f); // ±20% variation
+                float forceVariation = Random.Range(0.3f, 1.7f); // ±20% variation
                 float adjustedForce = forceAmount * forceVariation;
 
+                // Select a random particle type
                 ParticleTypeData particleTypeData = possibleParticleTypes[Random.Range(0, possibleParticleTypes.Count)];
                 GameObject droplet = particleTypeData.SpawnParticle(spawnPoint.position, spawnPoint.rotation);
 
+                // Apply force to the droplet
                 Rigidbody2D rbComponent = droplet.GetComponent<Rigidbody2D>();
                 if (rbComponent) rbComponent.AddForce(randomDirection * adjustedForce, ForceMode2D.Impulse);
 
+                // Set particle type if applicable
                 FluidParticle fluidParticle = droplet.GetComponent<FluidParticle>();
-
                 if (fluidParticle) fluidParticle.SetParticleType(particleTypeData);
 
-                // Start a coroutine to destroy the particle after its lifetime
+                // Destroy the droplet after its lifetime
                 StartCoroutine(DestroyAfterLifetime(droplet, particleLifetime));
 
                 // Wait for the spawn interval
@@ -109,7 +109,5 @@ namespace Faucet
             // Destroy the particle
             Destroy(particle);
         }
-
-
     }
 }
