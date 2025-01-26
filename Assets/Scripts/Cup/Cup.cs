@@ -3,11 +3,11 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Cup : MonoBehaviour
 {
-    [SerializeField] private float maxMoveSpeed = 25f;
+    [SerializeField] private float maxMoveSpeed = 20f;
     [SerializeField] private float maxDistance = 10f;
-    [SerializeField] private float maxRotationSpeed = 720f;
-    [SerializeField] private float maxRotationDistance = 180f;
-    [SerializeField] private float maxRotationAngle = 90f;
+    [SerializeField] private float maxRotationSpeed = 300f;
+    [SerializeField] private float maxRotationDistance = 45f;
+    [SerializeField] private float maxRotationAngle = 180f;
 
     private Rigidbody2D rb;
 
@@ -33,6 +33,8 @@ public class Cup : MonoBehaviour
         // Calculating the speed of the cup
         float moveSpeed = deltaMagnitude * (maxMoveSpeed / maxDistance);
         moveSpeed = Mathf.Min(moveSpeed, maxMoveSpeed);
+        
+        Debug.Log(maxMoveSpeed);
 
         // Calculating the move direction
         Vector3 moveDirection = deltaPosition.normalized;

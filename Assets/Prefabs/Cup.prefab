@@ -530,10 +530,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa984ffc2daefc47b8fc92bdb3b29bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMoveSpeed: 10
+  maxMoveSpeed: 20
   maxDistance: 10
-  maxRotationSpeed: 4000
-  maxRotationDistance: 180
+  maxRotationSpeed: 300
+  maxRotationDistance: 45
   maxRotationAngle: 180
 --- !u!50 &9197046150880824220
 Rigidbody2D:
