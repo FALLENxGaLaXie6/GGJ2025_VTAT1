@@ -298,6 +298,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 28955532894849399, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 28955532894849399, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5302324582523723461, guid: 78be364bc2b59a24abc9e4201b6c463f, type: 3}
+    - target: {fileID: 28955532894849399, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 28955532894849399, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 28955532894849399, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 28955532894849399, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021321591829458538, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090026896324157410, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090026896324157410, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 460f081de8d14094bb70dbcc74dd1acd, type: 3}
+    - target: {fileID: 2090026896324157410, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 460f081de8d14094bb70dbcc74dd1acd, type: 3}
+    - target: {fileID: 3105203392857178868, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3105203392857178868, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
     - target: {fileID: 6656615845556697364, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.590292
@@ -337,6 +385,22 @@ PrefabInstance:
     - target: {fileID: 6656615845556697364, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540452497765541110, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 45b46e892d60a5c418f85c03ad0a62bd, type: 3}
+    - target: {fileID: 8540452497765541110, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 45b46e892d60a5c418f85c03ad0a62bd, type: 3}
+    - target: {fileID: 8540452497765541110, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603384653175591443, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
+      propertyPath: m_Color.a
+      value: 0.81960785
       objectReference: {fileID: 0}
     - target: {fileID: 9058695448249940152, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
       propertyPath: m_Name
