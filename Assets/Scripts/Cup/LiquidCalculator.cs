@@ -45,7 +45,6 @@ public class LiquidCalculator : MonoBehaviour
         if (fluidParticle == null) return;
 
         RemoveParticle(fluidParticle.ParticleTypeData.ParticleType, fluidParticle);
-
     }
     
     private void AddParticle(ParticleType particleType, FluidParticle fluidParticle)
