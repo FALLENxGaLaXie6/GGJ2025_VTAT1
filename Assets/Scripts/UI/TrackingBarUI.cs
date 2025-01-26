@@ -30,7 +30,7 @@ namespace UI
 
         private void UpdateNumberParticlesText()
         {
-            textMeshProParticleTracker.text = "Particles: " + _currentParticles;
+            textMeshProParticleTracker.text = _currentParticles.ToString();
         }
 
         private void UpdateTrackingBarUI()
