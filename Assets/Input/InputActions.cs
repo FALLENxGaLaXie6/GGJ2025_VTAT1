@@ -35,17 +35,57 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SpewBeer"",
+                    ""type"": ""Button"",
+                    ""id"": ""66120625-313e-41f8-9eb1-5602b26580b0"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SpewBubbles"",
+                    ""type"": ""Button"",
+                    ""id"": ""88e65685-2f13-43bb-a37a-c25c6ca7f240"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""6216e8c3-231a-44fe-a213-1e9ab8c2dd37"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""path"": ""<Keyboard>/1"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""SpewWater"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a737119e-c7fa-4380-8f64-756b7c9e48fb"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SpewBeer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3d2f9a5b-2d4a-46dc-9a4a-22256199ec08"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SpewBubbles"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -57,6 +97,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         // Faucet
         m_Faucet = asset.FindActionMap("Faucet", throwIfNotFound: true);
         m_Faucet_SpewWater = m_Faucet.FindAction("SpewWater", throwIfNotFound: true);
+        m_Faucet_SpewBeer = m_Faucet.FindAction("SpewBeer", throwIfNotFound: true);
+        m_Faucet_SpewBubbles = m_Faucet.FindAction("SpewBubbles", throwIfNotFound: true);
     }
 
     ~@InputActions()
@@ -124,11 +166,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Faucet;
     private List<IFaucetActions> m_FaucetActionsCallbackInterfaces = new List<IFaucetActions>();
     private readonly InputAction m_Faucet_SpewWater;
+    private readonly InputAction m_Faucet_SpewBeer;
+    private readonly InputAction m_Faucet_SpewBubbles;
     public struct FaucetActions
     {
         private @InputActions m_Wrapper;
         public FaucetActions(@InputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @SpewWater => m_Wrapper.m_Faucet_SpewWater;
+        public InputAction @SpewBeer => m_Wrapper.m_Faucet_SpewBeer;
+        public InputAction @SpewBubbles => m_Wrapper.m_Faucet_SpewBubbles;
         public InputActionMap Get() { return m_Wrapper.m_Faucet; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -141,6 +187,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @SpewWater.started += instance.OnSpewWater;
             @SpewWater.performed += instance.OnSpewWater;
             @SpewWater.canceled += instance.OnSpewWater;
+            @SpewBeer.started += instance.OnSpewBeer;
+            @SpewBeer.performed += instance.OnSpewBeer;
+            @SpewBeer.canceled += instance.OnSpewBeer;
+            @SpewBubbles.started += instance.OnSpewBubbles;
+            @SpewBubbles.performed += instance.OnSpewBubbles;
+            @SpewBubbles.canceled += instance.OnSpewBubbles;
         }
 
         private void UnregisterCallbacks(IFaucetActions instance)
@@ -148,6 +200,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @SpewWater.started -= instance.OnSpewWater;
             @SpewWater.performed -= instance.OnSpewWater;
             @SpewWater.canceled -= instance.OnSpewWater;
+            @SpewBeer.started -= instance.OnSpewBeer;
+            @SpewBeer.performed -= instance.OnSpewBeer;
+            @SpewBeer.canceled -= instance.OnSpewBeer;
+            @SpewBubbles.started -= instance.OnSpewBubbles;
+            @SpewBubbles.performed -= instance.OnSpewBubbles;
+            @SpewBubbles.canceled -= instance.OnSpewBubbles;
         }
 
         public void RemoveCallbacks(IFaucetActions instance)
@@ -168,5 +226,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     public interface IFaucetActions
     {
         void OnSpewWater(InputAction.CallbackContext context);
+        void OnSpewBeer(InputAction.CallbackContext context);
+        void OnSpewBubbles(InputAction.CallbackContext context);
     }
 }

@@ -5,6 +5,7 @@ using Scriptable_Objects;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace Faucet
 {
@@ -12,6 +13,10 @@ namespace Faucet
     {
         [ListDrawerSettings(ShowFoldout = true, DraggableItems = true, ShowIndexLabels = true)] [SerializeField]
         private List<ParticleTypeData> possibleParticleTypes;
+
+        private ParticleTypeData _faucetMainParticleType;
+
+        [SerializeField] private FaucetSound faucetSound;
 
         [SerializeField] private Transform spawnPoint;
         [SerializeField] private GameObject dropletPrefab;
@@ -31,30 +36,31 @@ namespace Faucet
             _InputActions = new InputActions();
         }
 
+        private void Start()
+        {
+            _faucetMainParticleType = possibleParticleTypes[0];
+        }
+
         private void OnEnable()
         {
+            _faucetMainParticleType = possibleParticleTypes[0];
             // Enable the InputActions
             _InputActions.Enable();
-
-            // Subscribe to the button hold action
-            _InputActions.Faucet.SpewWater.started += OnSpewWaterButtonPressed;
-            _InputActions.Faucet.SpewWater.canceled += OnSpewWaterButtonReleased;
+            _faucetMainParticleType.SubscribeInputBasedOnType(_InputActions, OnSpewWaterButtonPressed, OnSpewWaterButtonReleased);
         }
 
         private void OnDisable()
         {
             // Disable the InputActions
             _InputActions.Disable();
-
-            // Unsubscribe from the button hold action
-            _InputActions.Faucet.SpewWater.started -= OnSpewWaterButtonPressed;
-            _InputActions.Faucet.SpewWater.canceled -= OnSpewWaterButtonReleased;
+            _faucetMainParticleType.UnsubscribeInputBasedOnType(_InputActions, OnSpewWaterButtonPressed, OnSpewWaterButtonReleased);
         }
 
         private void OnSpewWaterButtonPressed(InputAction.CallbackContext obj)
         {
             // Start spawning objects
             _SpawnCoroutine = StartCoroutine(SpawnObjects());
+            faucetSound.PlayFaucetSound();
         }
 
         private void OnSpewWaterButtonReleased(InputAction.CallbackContext obj)
@@ -64,6 +70,7 @@ namespace Faucet
 
             StopCoroutine(_SpawnCoroutine);
             _SpawnCoroutine = null;
+            faucetSound.StopFaucetSound();
         }
 
         private IEnumerator SpawnObjects()

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Color>k__BackingField: {r: 0.5213154, g: 0.5213154, b: 0.6698113, a: 1}
   <FluidParticle>k__BackingField: {fileID: 4776170243888690176, guid: 194af4616ef6267488fb0e6e2c2a69fa, type: 3}
+  <ParticleType>k__BackingField: 2

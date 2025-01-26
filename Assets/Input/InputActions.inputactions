@@ -13,17 +13,57 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "SpewBeer",
+                    "type": "Button",
+                    "id": "66120625-313e-41f8-9eb1-5602b26580b0",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SpewBubbles",
+                    "type": "Button",
+                    "id": "88e65685-2f13-43bb-a37a-c25c6ca7f240",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "6216e8c3-231a-44fe-a213-1e9ab8c2dd37",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "SpewWater",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a737119e-c7fa-4380-8f64-756b7c9e48fb",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpewBeer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3d2f9a5b-2d4a-46dc-9a4a-22256199ec08",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpewBubbles",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
