@@ -34,7 +34,7 @@ public class LiquidCalculator : MonoBehaviour
         FluidParticle fluidParticle = other.GetComponent<FluidParticle>();
         if (fluidParticle == null) return;
 
-        AddParticle(fluidParticle.ParticleTypeData.ParticleType);
+        AddParticle(fluidParticle.ParticleTypeData.ParticleType, fluidParticle);
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -43,24 +43,26 @@ public class LiquidCalculator : MonoBehaviour
         FluidParticle fluidParticle = other.GetComponent<FluidParticle>();
         if (fluidParticle == null) return;
 
-        RemoveParticle(fluidParticle.ParticleTypeData.ParticleType);
+        RemoveParticle(fluidParticle.ParticleTypeData.ParticleType, fluidParticle);
 
     }
     
-    private void AddParticle(ParticleType particleType)
+    private void AddParticle(ParticleType particleType, FluidParticle fluidParticle)
     {
         if (!_particlesInCup.TryGetValue(particleType, out var value)) return;
 
         _particlesInCup[particleType]++;
+        fluidParticle.BroadcastParticleAddition(1);
         Debug.Log($"Added {particleType}. Total: {_particlesInCup[particleType]}");
     }
     
-    private void RemoveParticle(ParticleType particleType)
+    private void RemoveParticle(ParticleType particleType, FluidParticle fluidParticle)
     {
         if (!_particlesInCup.TryGetValue(particleType, out var value)) return;
         if(value <= 0) return;
 
         _particlesInCup[particleType]--;
+        fluidParticle.BroadcastParticleRemoval(1);
         Debug.Log($"Removed {particleType}. Total: {_particlesInCup[particleType]}");
     }
 

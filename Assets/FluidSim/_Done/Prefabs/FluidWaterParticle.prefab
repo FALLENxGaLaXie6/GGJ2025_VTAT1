@@ -165,4 +165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c17846f50c9445ed9b598204eb9c51e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnAddBeerParticle: {fileID: 11400000, guid: 64c3088a92bdb3f45ae6984f43e1191b, type: 2}
+  OnAddWaterParticle: {fileID: 11400000, guid: 74e2f2380757c0946bad541d679491cf, type: 2}
+  OnAddBubblesParticle: {fileID: 11400000, guid: 24314819bd9ce7f4e9c6f5ede3a99a6e, type: 2}
+  OnRemoveBeerParticle: {fileID: 11400000, guid: 9b1823533d265fa42b73f8383360d633, type: 2}
+  OnRemoveWaterParticle: {fileID: 11400000, guid: f4172753af3099a47b524b14eda85523, type: 2}
+  OnRemoveBubblesParticle: {fileID: 11400000, guid: 48b9e1e74d3d83d49a7e45a5768417ba, type: 2}
   <DefaultParticleTypeData>k__BackingField: {fileID: 11400000, guid: 138e177ee752216409ef3a005c7e86e7, type: 2}
