@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 5e48c88a23cd84427aa8cfac47bd563b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3040436060151257121
+    second: alien_1_phasein_0
+  - first:
+      213: 6712913612804407175
+    second: alien_1_phasein_1
+  - first:
+      213: 8351200525200631333
+    second: alien_1_phasein_2
+  - first:
+      213: -9118302888391964720
+    second: alien_1_phasein_3
+  - first:
+      213: 4715772625575316301
+    second: alien_1_phasein_4
+  - first:
+      213: -4495254404767814164
+    second: alien_1_phasein_5
+  - first:
+      213: 1021597447478122222
+    second: alien_1_phasein_6
+  - first:
+      213: -5989947023896011933
+    second: alien_1_phasein_7
+  - first:
+      213: 5648640043896839803
+    second: alien_1_phasein_8
+  - first:
+      213: 7303503492552868523
+    second: alien_1_phasein_9
+  - first:
+      213: 8616453025769829631
+    second: alien_1_phasein_10
+  - first:
+      213: 3695872766366379110
+    second: alien_1_phasein_11
+  - first:
+      213: 2396940264735021802
+    second: alien_1_phasein_12
+  - first:
+      213: 6657558741431873
+    second: alien_1_phasein_13
+  - first:
+      213: 3740534288880898028
+    second: alien_1_phasein_14
+  - first:
+      213: -9051923885225457152
+    second: alien_1_phasein_15
+  - first:
+      213: -4574426971183181238
+    second: alien_1_phasein_16
+  - first:
+      213: 8675949264866378528
+    second: alien_1_phasein_17
+  - first:
+      213: 5368413914600718473
+    second: alien_1_phasein_18
+  - first:
+      213: 6339164968236756933
+    second: alien_1_phasein_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: alien_1_phasein_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 63
+        width: 40
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1289a9fdc7cc13a20800000000000000
+      internalID: 3040436060151257121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 7
+        width: 42
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78f37134d5f092d50800000000000000
+      internalID: 6712913612804407175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 63
+        width: 47
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 526a3a091ac65e370800000000000000
+      internalID: 8351200525200631333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_3
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 120
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d78af675d7457180800000000000000
+      internalID: -9118302888391964720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_4
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 117
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4b8decb73ac17140800000000000000
+      internalID: 4715772625575316301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_5
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 116
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cededcc8fe5ad91c0800000000000000
+      internalID: -4495254404767814164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_6
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 118
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee6116047717d2e00800000000000000
+      internalID: 1021597447478122222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_7
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 101
+        width: 31
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36b1549faee6fdca0800000000000000
+      internalID: -5989947023896011933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_8
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 87
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e94803130046e40800000000000000
+      internalID: 5648640043896839803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_9
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 94
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba240791bb14b5560800000000000000
+      internalID: 7303503492552868523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_10
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 75
+        width: 36
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff4b9d0006ac39770800000000000000
+      internalID: 8616453025769829631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_11
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 80
+        width: 29
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66cee4e03b06a4330800000000000000
+      internalID: 3695872766366379110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_12
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 63
+        width: 32
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea9c53a874a34120800000000000000
+      internalID: 2396940264735021802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_13
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 69
+        width: 22
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 146badfa307a71000800000000000000
+      internalID: 6657558741431873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_14
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 46
+        width: 21
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cef0ae61e1c09e330800000000000000
+      internalID: 3740534288880898028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_15
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 47
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00a434f7f2b116280800000000000000
+      internalID: -9051923885225457152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_16
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 16
+        width: 45
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4219a3f7ee5480c0800000000000000
+      internalID: -4574426971183181238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_17
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 30
+        width: 33
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0230ca5a3e9276870800000000000000
+      internalID: 8675949264866378528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_18
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 30
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9804a032300708a40800000000000000
+      internalID: 5368413914600718473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alien_1_phasein_19
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 7
+        width: 46
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cf2a58c3fc39f750800000000000000
+      internalID: 6339164968236756933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      alien_1_phasein_0: 3040436060151257121
+      alien_1_phasein_1: 6712913612804407175
+      alien_1_phasein_10: 8616453025769829631
+      alien_1_phasein_11: 3695872766366379110
+      alien_1_phasein_12: 2396940264735021802
+      alien_1_phasein_13: 6657558741431873
+      alien_1_phasein_14: 3740534288880898028
+      alien_1_phasein_15: -9051923885225457152
+      alien_1_phasein_16: -4574426971183181238
+      alien_1_phasein_17: 8675949264866378528
+      alien_1_phasein_18: 5368413914600718473
+      alien_1_phasein_19: 6339164968236756933
+      alien_1_phasein_2: 8351200525200631333
+      alien_1_phasein_3: -9118302888391964720
+      alien_1_phasein_4: 4715772625575316301
+      alien_1_phasein_5: -4495254404767814164
+      alien_1_phasein_6: 1021597447478122222
+      alien_1_phasein_7: -5989947023896011933
+      alien_1_phasein_8: 5648640043896839803
+      alien_1_phasein_9: 7303503492552868523
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
