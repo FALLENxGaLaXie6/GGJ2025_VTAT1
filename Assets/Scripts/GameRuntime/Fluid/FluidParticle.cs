@@ -9,7 +9,7 @@ namespace GameRuntime.Fluid
     {
         private static readonly int Color1 = Shader.PropertyToID("_Color");
         [InlineEditor] [field: SerializeField] private ParticleTypeData DefaultParticleTypeData { get; set; }
-        private ParticleTypeData ParticleTypeData { get; set; }
+        public ParticleTypeData ParticleTypeData { get; private set; }
 
         private SpriteRenderer _SpriteRenderer;
 
