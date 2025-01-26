@@ -15,4 +15,4 @@ MonoBehaviour:
   <Color>k__BackingField: {r: 0.5213154, g: 0.5213154, b: 0.6698113, a: 1}
   <FluidParticle>k__BackingField: {fileID: 4776170243888690176, guid: 194af4616ef6267488fb0e6e2c2a69fa, type: 3}
   <ParticleType>k__BackingField: 2
-  <ParticleTypeFaucetSound>k__BackingField: {fileID: 8300000, guid: d02d62b26a61e1442a700e8c02a64ab8, type: 3}
+  <ParticleTypeFaucetSound>k__BackingField: {fileID: 8300000, guid: eedf2091d93cba8489aad0d04d41c674, type: 3}

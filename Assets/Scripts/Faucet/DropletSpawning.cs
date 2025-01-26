@@ -60,7 +60,6 @@ namespace Faucet
         {
             // Start spawning objects
             _SpawnCoroutine = StartCoroutine(SpawnObjects());
-            faucetSound.PlayFaucetSound();
         }
 
         private void OnSpewWaterButtonReleased(InputAction.CallbackContext obj)
@@ -70,7 +69,6 @@ namespace Faucet
 
             StopCoroutine(_SpawnCoroutine);
             _SpawnCoroutine = null;
-            faucetSound.StopFaucetSound();
         }
 
         private IEnumerator SpawnObjects()
@@ -91,6 +89,8 @@ namespace Faucet
                 // Select a random particle type
                 ParticleTypeData particleTypeData = possibleParticleTypes[Random.Range(0, possibleParticleTypes.Count)];
                 GameObject droplet = particleTypeData.SpawnParticle(spawnPoint.position, spawnPoint.rotation);
+
+                faucetSound.PlayFaucetSound();
 
                 // Apply force to the droplet
                 Rigidbody2D rbComponent = droplet.GetComponent<Rigidbody2D>();
