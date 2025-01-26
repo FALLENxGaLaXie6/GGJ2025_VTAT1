@@ -23,6 +23,8 @@ namespace Scriptable_Objects
         [field: SerializeField, Range(0, 100), Tooltip("It's a variation as a percentage.")]
         public float WaterVariationPercentage { get; private set; } = 15f;
 
+        [field: SerializeField] public Texture2D RecipeUITexture { get; private set; }
+
 
         /// <summary>
         /// Comments for test commit
