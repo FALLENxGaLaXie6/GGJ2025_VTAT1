@@ -1,9 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Cup
+public class LiquidCalculator : MonoBehaviour
 {
-    public class LiquidCalculator : MonoBehaviour
-    {
-        
-    }
+    
 }
