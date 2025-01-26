@@ -976,7 +976,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'ALIEN SPACE BAR STATION SODA SHOPPE 2: The Revenge of the Sith'
+  m_text: 'ALIEN SPACE BAR STATION SODA SHOPPE 2: The Revenge of the Sip'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1281,7 +1281,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'ALIEN SPACE BAR STATION SODA SHOPPE 2: The Revenge of the Sith'
+  m_text: 'ALIEN SPACE BAR STATION SODA SHOPPE 2: The Revenge of the Sip'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e6ed2700712122e44ae0cc29b1bb1f31, type: 2}
