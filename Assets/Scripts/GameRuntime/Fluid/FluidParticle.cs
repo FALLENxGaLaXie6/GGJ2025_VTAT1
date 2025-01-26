@@ -23,6 +23,9 @@ namespace GameRuntime.Fluid
 
         private SpriteRenderer _SpriteRenderer;
 
+        // Store the coroutine reference
+        private Coroutine _destroyCoroutine;
+
 
         private void Awake()
         {
@@ -80,19 +83,38 @@ namespace GameRuntime.Fluid
             }
         }
 
-        public void StartDestroyAfterLifeTimeCoroutine(GameObject droplet, float particleLifetime)
+        public void StartDestroyAfterLifeTimeCoroutine(FluidParticle fluidParticle, float particleLifetime)
         {
-            // Destroy the droplet after its lifetime
-            StartCoroutine(DestroyAfterLifetime(droplet, particleLifetime));
+            // Stop any existing coroutine before starting a new one
+            if (_destroyCoroutine != null)
+            {
+                StopCoroutine(_destroyCoroutine);
+            }
+
+            // Start and store the coroutine
+            _destroyCoroutine = StartCoroutine(DestroyAfterLifetime(fluidParticle, particleLifetime));
         }
 
-        private IEnumerator DestroyAfterLifetime(GameObject particle, float lifetime)
+        public void StopDestroyAfterLifeTimeCoroutine()
+        {
+            // Stop the coroutine if it is running
+            if (_destroyCoroutine != null)
+            {
+                StopCoroutine(_destroyCoroutine);
+                _destroyCoroutine = null;
+            }
+        }
+
+        private IEnumerator DestroyAfterLifetime(FluidParticle particle, float lifetime)
         {
             // Wait for the lifetime duration
             yield return new WaitForSeconds(lifetime);
 
             // Destroy the particle
-            Destroy(particle);
+            Destroy(particle.gameObject);
+
+            // Clear the reference to the coroutine after it completes
+            _destroyCoroutine = null;
         }
     }
 }

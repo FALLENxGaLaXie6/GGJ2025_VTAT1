@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class LiquidCalculator : MonoBehaviour
 {
+    [SerializeField] private float liquidLifetime = 15f;
     private Collider2D _collider;
 
     [Header("Particles in Cup")]
@@ -54,6 +55,7 @@ public class LiquidCalculator : MonoBehaviour
         _particlesInCup[particleType]++;
         fluidParticle.BroadcastParticleAddition(1);
         Debug.Log($"Added {particleType}. Total: {_particlesInCup[particleType]}");
+        fluidParticle.StopDestroyAfterLifeTimeCoroutine();
     }
     
     private void RemoveParticle(ParticleType particleType, FluidParticle fluidParticle)
@@ -64,6 +66,6 @@ public class LiquidCalculator : MonoBehaviour
         _particlesInCup[particleType]--;
         fluidParticle.BroadcastParticleRemoval(1);
         Debug.Log($"Removed {particleType}. Total: {_particlesInCup[particleType]}");
+        fluidParticle.StartDestroyAfterLifeTimeCoroutine(fluidParticle, liquidLifetime);
     }
-
 }

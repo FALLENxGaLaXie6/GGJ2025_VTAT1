@@ -100,7 +100,7 @@ namespace Faucet
                 FluidParticle fluidParticle = droplet.GetComponent<FluidParticle>();
                 if (fluidParticle) fluidParticle.SetParticleType(particleTypeData);
 
-                fluidParticle.StartDestroyAfterLifeTimeCoroutine(droplet, particleLifetime);
+                fluidParticle.StartDestroyAfterLifeTimeCoroutine(fluidParticle, particleLifetime);
 
                 // Wait for the spawn interval
                 yield return new WaitForSeconds(spawnInterval);
