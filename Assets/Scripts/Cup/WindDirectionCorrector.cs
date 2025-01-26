@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class ParticleControl : MonoBehaviour
 {
     private ParticleSystem particleSystem;
@@ -9,7 +11,13 @@ public class ParticleControl : MonoBehaviour
     [SerializeField] float attractionForce = 5f;
 
     private ParticleSystem.Particle[] particles;
+    private AudioSource _audioSource;
 
+
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     void Start()
     {
@@ -55,6 +63,7 @@ public class ParticleControl : MonoBehaviour
             if (!particleSystem.isPlaying) // Ensure it doesn't restart unnecessarily
             {
                 particleSystem.Play();
+                _audioSource.Play();
             }
         }
 
@@ -64,6 +73,7 @@ public class ParticleControl : MonoBehaviour
             if (particleSystem.isPlaying) // Ensure it doesn't stop unnecessarily
             {
                 particleSystem.Stop();
+                _audioSource.Stop();
             }
         }
     }
