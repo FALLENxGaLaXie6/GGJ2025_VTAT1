@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Events;
 using Scriptable_Objects;
 using Sirenix.OdinInspector;
@@ -77,6 +78,21 @@ namespace GameRuntime.Fluid
                     OnRemoveBubblesParticle?.Raise(numberOfParticles);
                     break;
             }
+        }
+
+        public void StartDestroyAfterLifeTimeCoroutine(GameObject droplet, float particleLifetime)
+        {
+            // Destroy the droplet after its lifetime
+            StartCoroutine(DestroyAfterLifetime(droplet, particleLifetime));
+        }
+
+        private IEnumerator DestroyAfterLifetime(GameObject particle, float lifetime)
+        {
+            // Wait for the lifetime duration
+            yield return new WaitForSeconds(lifetime);
+
+            // Destroy the particle
+            Destroy(particle);
         }
     }
 }
