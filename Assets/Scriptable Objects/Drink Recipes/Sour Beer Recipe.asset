@@ -15,8 +15,8 @@ MonoBehaviour:
   <RecipeName>k__BackingField: Sour Beer
   <BubbleGoal>k__BackingField: 7
   <BubbleVariationPercentage>k__BackingField: 15
-  <BeerGoal>k__BackingField: 3
+  <BeerGoal>k__BackingField: 2
   <BeerVariationPercentage>k__BackingField: 15
-  <WaterGoal>k__BackingField: 7
+  <WaterGoal>k__BackingField: 8
   <WaterVariationPercentage>k__BackingField: 15
-  <RecipeUITexture>k__BackingField: {fileID: -8198411599160869816, guid: 92aab4acf6cac4542a74982ee84c207a, type: 3}
+  <RecipeUITexture>k__BackingField: {fileID: 305824537459636620, guid: abdb42d0c8d2b4dd587c35e1fe678afc, type: 3}

@@ -15,7 +15,7 @@ MonoBehaviour:
   <RecipeName>k__BackingField: IPA Beer
   <BubbleGoal>k__BackingField: 5
   <BubbleVariationPercentage>k__BackingField: 15
-  <BeerGoal>k__BackingField: 5
+  <BeerGoal>k__BackingField: 6
   <BeerVariationPercentage>k__BackingField: 15
   <WaterGoal>k__BackingField: 5
   <WaterVariationPercentage>k__BackingField: 15
