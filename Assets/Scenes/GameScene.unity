@@ -119,22 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &1167074660 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1219262469739202566, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
-  m_PrefabInstance: {fileID: 6362669648269641608}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!82 &2054201951 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4508759016850816636, guid: 3a5f1fbb360d4f945b25699ad9c6ad80, type: 3}
-  m_PrefabInstance: {fileID: 8561415268868084522}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1192980411079854861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -257,10 +241,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4064048899147765588, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
-      propertyPath: unpauseButton
-      value: 
-      objectReference: {fileID: 1167074660}
     - target: {fileID: 6656615845556697364, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.590292
@@ -301,10 +281,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7900468349177245138, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
-      propertyPath: gameSong
-      value: 
-      objectReference: {fileID: 2054201951}
     - target: {fileID: 9058695448249940152, guid: 952c1b6172c742548ad74034ded543d5, type: 3}
       propertyPath: m_Name
       value: UI
