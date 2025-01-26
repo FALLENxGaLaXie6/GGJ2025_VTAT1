@@ -50,6 +50,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.239
       objectReference: {fileID: 0}
+    - target: {fileID: 4919932890538382951, guid: 383001330c6f1034788e2810968568ec, type: 3}
+      propertyPath: <ParticleTypeData>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: b531905b1d8a75945ba1113a27d62d14, type: 2}
     - target: {fileID: 5563297163136560837, guid: 383001330c6f1034788e2810968568ec, type: 3}
       propertyPath: m_Name
       value: FaucetBubbles
@@ -144,6 +148,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.239
       objectReference: {fileID: 0}
+    - target: {fileID: 4919932890538382951, guid: 383001330c6f1034788e2810968568ec, type: 3}
+      propertyPath: <ParticleTypeData>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 58891dc714dd1444484afe5236008019, type: 2}
     - target: {fileID: 5563297163136560837, guid: 383001330c6f1034788e2810968568ec, type: 3}
       propertyPath: m_Name
       value: FaucetBeer
@@ -226,6 +234,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9047559471683205845}
     m_Modifications:
+    - target: {fileID: 4919932890538382951, guid: 383001330c6f1034788e2810968568ec, type: 3}
+      propertyPath: <ParticleTypeData>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 138e177ee752216409ef3a005c7e86e7, type: 2}
     - target: {fileID: 5563297163136560837, guid: 383001330c6f1034788e2810968568ec, type: 3}
       propertyPath: m_Name
       value: FaucetWater

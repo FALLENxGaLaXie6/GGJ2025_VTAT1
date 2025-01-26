@@ -10,8 +10,8 @@ namespace Scriptable_Objects
     {
         [field: SerializeField] public Color Color { get; private set; } = Color.blue;
         [field: SerializeField] public GameObject FluidParticle { get; private set;}
-
         [field: SerializeField] public ParticleType ParticleType { get; private set; } = ParticleType.Water;
+        [field: SerializeField] public AudioClip ParticleTypeFaucetSound { get; private set; }
 
         public GameObject SpawnParticle(Vector3 spawnPosition, Quaternion spawnRotation)
         {
