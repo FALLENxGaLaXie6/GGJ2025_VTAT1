@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace UI
 {
     public class TrackingBarUI : MonoBehaviour
     {
+        [SerializeField] private TextMeshProUGUI textMeshProParticleTracker;
         [SerializeField] private Image frontBarImage;
         [SerializeField] private Image backBarImage;
         [SerializeField] private float chipSpeed = 2f;
@@ -23,6 +26,11 @@ namespace UI
         {
             _currentParticles = Mathf.Clamp(_currentParticles, 0, _maxParticles + 50);
             UpdateTrackingBarUI();
+        }
+
+        private void UpdateNumberParticlesText()
+        {
+            textMeshProParticleTracker.text = "Particles: " + _currentParticles;
         }
 
         private void UpdateTrackingBarUI()
@@ -56,12 +64,14 @@ namespace UI
         {
             _currentParticles -= numberRemoved;
             _lerpTimer = 0f;
+            UpdateNumberParticlesText();
         }
 
         public void AddParticles(int numberAdded)
         {
             _currentParticles += numberAdded;
             _lerpTimer = 0f;
+            UpdateNumberParticlesText();
         }
 
         public void SetMaxParticles(int maxParticles) => _maxParticles = maxParticles;

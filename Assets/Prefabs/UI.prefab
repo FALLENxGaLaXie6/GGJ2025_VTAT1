@@ -1314,10 +1314,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7814301222474750991, guid: c16b41a0b7ccfde4e9d9f4c1fae97325, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -302.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8018483549436742871, guid: c16b41a0b7ccfde4e9d9f4c1fae97325, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5008740318637635794, guid: a1a723c126af64a6a962c52c86fd09ab, type: 3}
+    - target: {fileID: 8076127047534195371, guid: c16b41a0b7ccfde4e9d9f4c1fae97325, type: 3}
+      propertyPath: m_text
+      value: Bubble
+      objectReference: {fileID: 0}
     - target: {fileID: 9141136506056128285, guid: c16b41a0b7ccfde4e9d9f4c1fae97325, type: 3}
       propertyPath: m_Color.b
       value: 0.1584906
@@ -1642,10 +1650,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7814301222474750991, guid: c16b41a0b7ccfde4e9d9f4c1fae97325, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -298.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8018483549436742871, guid: c16b41a0b7ccfde4e9d9f4c1fae97325, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -938813448593544047, guid: 4509c1154f79e4005928eb078d05f7f9, type: 3}
+    - target: {fileID: 8076127047534195371, guid: c16b41a0b7ccfde4e9d9f4c1fae97325, type: 3}
+      propertyPath: m_text
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: 9141136506056128285, guid: c16b41a0b7ccfde4e9d9f4c1fae97325, type: 3}
       propertyPath: m_Color.b
       value: 1
