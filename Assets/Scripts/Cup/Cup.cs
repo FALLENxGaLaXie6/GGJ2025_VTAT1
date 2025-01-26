@@ -33,8 +33,6 @@ public class Cup : MonoBehaviour
         // Calculating the speed of the cup
         float moveSpeed = deltaMagnitude * (maxMoveSpeed / maxDistance);
         moveSpeed = Mathf.Min(moveSpeed, maxMoveSpeed);
-        
-        Debug.Log(maxMoveSpeed);
 
         // Calculating the move direction
         Vector3 moveDirection = deltaPosition.normalized;
