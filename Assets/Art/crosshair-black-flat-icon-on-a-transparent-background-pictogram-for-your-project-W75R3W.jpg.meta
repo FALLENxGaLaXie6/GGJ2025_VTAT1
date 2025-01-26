@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      crosshair-black-flat-icon-on-a-transparent-background-pictogram-for-your-project-W75R3W_0: 8306157271313907942
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
