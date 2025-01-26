@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using Scriptable_Objects;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
