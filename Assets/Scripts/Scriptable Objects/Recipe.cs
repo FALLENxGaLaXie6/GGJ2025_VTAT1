@@ -24,6 +24,10 @@ namespace Scriptable_Objects
         public float WaterVariationPercentage { get; private set; } = 15f;
 
 
+        /// <summary>
+        /// Comments for test commit
+        /// </summary>
+        /// <returns></returns>
         public int GetMaxFeasibleBubbles()
         {
             float bubbleVariation = BubbleVariationPercentage / 100f;
