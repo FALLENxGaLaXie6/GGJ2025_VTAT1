@@ -53,13 +53,22 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""71e777cd-c84b-4212-9b3f-d706b7cab876"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""6216e8c3-231a-44fe-a213-1e9ab8c2dd37"",
-                    ""path"": ""<Keyboard>/1"",
+                    ""path"": ""<Keyboard>/3"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -81,11 +90,22 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""3d2f9a5b-2d4a-46dc-9a4a-22256199ec08"",
-                    ""path"": ""<Keyboard>/3"",
+                    ""path"": ""<Keyboard>/1"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""SpewBubbles"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9f25b8c0-7187-4bf9-bb87-630a21ba58a9"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -99,6 +119,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Faucet_SpewWater = m_Faucet.FindAction("SpewWater", throwIfNotFound: true);
         m_Faucet_SpewBeer = m_Faucet.FindAction("SpewBeer", throwIfNotFound: true);
         m_Faucet_SpewBubbles = m_Faucet.FindAction("SpewBubbles", throwIfNotFound: true);
+        m_Faucet_Pause = m_Faucet.FindAction("Pause", throwIfNotFound: true);
     }
 
     ~@InputActions()
@@ -168,6 +189,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Faucet_SpewWater;
     private readonly InputAction m_Faucet_SpewBeer;
     private readonly InputAction m_Faucet_SpewBubbles;
+    private readonly InputAction m_Faucet_Pause;
     public struct FaucetActions
     {
         private @InputActions m_Wrapper;
@@ -175,6 +197,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @SpewWater => m_Wrapper.m_Faucet_SpewWater;
         public InputAction @SpewBeer => m_Wrapper.m_Faucet_SpewBeer;
         public InputAction @SpewBubbles => m_Wrapper.m_Faucet_SpewBubbles;
+        public InputAction @Pause => m_Wrapper.m_Faucet_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Faucet; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -193,6 +216,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @SpewBubbles.started += instance.OnSpewBubbles;
             @SpewBubbles.performed += instance.OnSpewBubbles;
             @SpewBubbles.canceled += instance.OnSpewBubbles;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IFaucetActions instance)
@@ -206,6 +232,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @SpewBubbles.started -= instance.OnSpewBubbles;
             @SpewBubbles.performed -= instance.OnSpewBubbles;
             @SpewBubbles.canceled -= instance.OnSpewBubbles;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IFaucetActions instance)
@@ -228,5 +257,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnSpewWater(InputAction.CallbackContext context);
         void OnSpewBeer(InputAction.CallbackContext context);
         void OnSpewBubbles(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }
