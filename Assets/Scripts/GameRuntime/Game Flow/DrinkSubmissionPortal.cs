@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Events;
 using Scriptable_Objects;
 using UnityEngine;
@@ -8,6 +9,9 @@ namespace GameRuntime.Game_Flow
 {
     public class DrinkSubmissionPortal : MonoBehaviour
     {
+        [SerializeField] private float waitTimeToKillDrinkParticleSystem = 1.5f;
+        [SerializeField] private ParticleSystem goodDrinkServedParticleSystem;
+        [SerializeField] private ParticleSystem badDrinkServedParticleSystem;
         [SerializeField] private VoidEvent _successfulDrinkMadeEvent;
         [SerializeField] private VoidEvent _failedDrinkMadeEvent;
 
@@ -40,6 +44,31 @@ namespace GameRuntime.Game_Flow
         private void OnDisable()
         {
             //_InputActions.Faucet.SubmitDrink.started -= AttemptSubmitDrink;
+        }
+
+        public void OnGoodDrinkServed()
+        {
+            Debug.LogWarning("Good drink served!");
+            goodDrinkServedParticleSystem.Play();
+            //StartCoroutine(WaitToKillGoodDrinkServedParticleSystem());
+        }
+
+        public void OnBadDrinkServed()
+        {
+            Debug.LogWarning("Bad drink served!");
+            badDrinkServedParticleSystem.Play();
+            //StartCoroutine(WaitToKillBadDrinkServedParticleSystem());
+        }
+
+
+        private IEnumerator WaitToKillGoodDrinkServedParticleSystem()
+        {
+            yield return new WaitForSeconds(waitTimeToKillDrinkParticleSystem);
+        }
+
+        private IEnumerator WaitToKillBadDrinkServedParticleSystem()
+        {
+            yield return new WaitForSeconds(waitTimeToKillDrinkParticleSystem);
         }
 
         private void Update()
