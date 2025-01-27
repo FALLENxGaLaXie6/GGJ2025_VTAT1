@@ -42,5 +42,6 @@ public class GameInput : MonoBehaviour
     private void Exit_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         Loader.Load(Loader.Scene.MainMenuScene);
+        Time.timeScale = 1f;
     }
 }

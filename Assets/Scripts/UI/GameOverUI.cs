@@ -13,7 +13,7 @@ public class GameOverUI : MonoBehaviour
 
         Hide();
     }
-
+    
     private void GameManager_OnStateChanged(object sender, EventArgs e)
     {
         if (GameManager.Instance.IsGameOver())
