@@ -62,6 +62,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SubmitDrink"",
+                    ""type"": ""Button"",
+                    ""id"": ""1addb1dc-39bf-49c5-b131-4493e6a9085c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -108,6 +117,17 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0f97a6ef-7694-4828-a967-e0f9dc98ae0e"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SubmitDrink"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -120,6 +140,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Faucet_SpewBeer = m_Faucet.FindAction("SpewBeer", throwIfNotFound: true);
         m_Faucet_SpewBubbles = m_Faucet.FindAction("SpewBubbles", throwIfNotFound: true);
         m_Faucet_Pause = m_Faucet.FindAction("Pause", throwIfNotFound: true);
+        m_Faucet_SubmitDrink = m_Faucet.FindAction("SubmitDrink", throwIfNotFound: true);
     }
 
     ~@InputActions()
@@ -190,6 +211,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Faucet_SpewBeer;
     private readonly InputAction m_Faucet_SpewBubbles;
     private readonly InputAction m_Faucet_Pause;
+    private readonly InputAction m_Faucet_SubmitDrink;
     public struct FaucetActions
     {
         private @InputActions m_Wrapper;
@@ -198,6 +220,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @SpewBeer => m_Wrapper.m_Faucet_SpewBeer;
         public InputAction @SpewBubbles => m_Wrapper.m_Faucet_SpewBubbles;
         public InputAction @Pause => m_Wrapper.m_Faucet_Pause;
+        public InputAction @SubmitDrink => m_Wrapper.m_Faucet_SubmitDrink;
         public InputActionMap Get() { return m_Wrapper.m_Faucet; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -219,6 +242,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
+            @SubmitDrink.started += instance.OnSubmitDrink;
+            @SubmitDrink.performed += instance.OnSubmitDrink;
+            @SubmitDrink.canceled += instance.OnSubmitDrink;
         }
 
         private void UnregisterCallbacks(IFaucetActions instance)
@@ -235,6 +261,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
+            @SubmitDrink.started -= instance.OnSubmitDrink;
+            @SubmitDrink.performed -= instance.OnSubmitDrink;
+            @SubmitDrink.canceled -= instance.OnSubmitDrink;
         }
 
         public void RemoveCallbacks(IFaucetActions instance)
@@ -258,5 +287,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnSpewBeer(InputAction.CallbackContext context);
         void OnSpewBubbles(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
+        void OnSubmitDrink(InputAction.CallbackContext context);
     }
 }
