@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <RecipeName>k__BackingField: Ale Beer
   <BubbleGoal>k__BackingField: 8
-  <BubbleVariationPercentage>k__BackingField: 15
+  <BubbleVariationPercentage>k__BackingField: 50
   <BeerGoal>k__BackingField: 3
-  <BeerVariationPercentage>k__BackingField: 15
+  <BeerVariationPercentage>k__BackingField: 50
   <WaterGoal>k__BackingField: 5
-  <WaterVariationPercentage>k__BackingField: 15
+  <WaterVariationPercentage>k__BackingField: 50
   <RecipeUITexture>k__BackingField: {fileID: -8198411599160869816, guid: 92aab4acf6cac4542a74982ee84c207a, type: 3}
