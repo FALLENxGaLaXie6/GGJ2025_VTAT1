@@ -19,4 +19,4 @@ MonoBehaviour:
   <BeerVariationPercentage>k__BackingField: 50
   <WaterGoal>k__BackingField: 5
   <WaterVariationPercentage>k__BackingField: 50
-  <RecipeUITexture>k__BackingField: {fileID: -3626723738388716578, guid: 145a7618f933243dca023b717b7ebd7e, type: 3}
+  <RecipeUITexture>k__BackingField: {fileID: 5091523103745320008, guid: b8250de72eb3143a78250f0be691e608, type: 3}
