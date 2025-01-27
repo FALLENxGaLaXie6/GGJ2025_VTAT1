@@ -131,7 +131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 578406820255119553, guid: 79d6ac40538bbb94aaa507c6062e5920, type: 3}
       propertyPath: m_Name
-      value: BarPatronWorldSpaceObject3
+      value: Snake Dude
       objectReference: {fileID: 0}
     - target: {fileID: 4087141749250690197, guid: 79d6ac40538bbb94aaa507c6062e5920, type: 3}
       propertyPath: m_Controller
@@ -217,6 +217,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7040402786145618110, guid: 79d6ac40538bbb94aaa507c6062e5920, type: 3}
+      propertyPath: <CustomerSfxData>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 0fab7763e0430b247b8d78a31026a4cc, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -248,7 +252,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 578406820255119553, guid: cf5062ec507ed4f4399ecef3c17c5599, type: 3}
       propertyPath: m_Name
-      value: BarPatronWorldSpaceObject2
+      value: Crab Dude
       objectReference: {fileID: 0}
     - target: {fileID: 4087141749250690197, guid: cf5062ec507ed4f4399ecef3c17c5599, type: 3}
       propertyPath: m_Controller
@@ -334,6 +338,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7040402786145618110, guid: cf5062ec507ed4f4399ecef3c17c5599, type: 3}
+      propertyPath: <CustomerSfxData>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: fba40290394a80c4696a124fe8d3979f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -365,7 +373,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 578406820255119553, guid: ad26e078201e24c4b935d273742265c1, type: 3}
       propertyPath: m_Name
-      value: BarPatronWorldSpaceObject
+      value: Alien Dude
       objectReference: {fileID: 0}
     - target: {fileID: 5522783996555276043, guid: ad26e078201e24c4b935d273742265c1, type: 3}
       propertyPath: m_Pivot.x
@@ -447,6 +455,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7040402786145618110, guid: ad26e078201e24c4b935d273742265c1, type: 3}
+      propertyPath: <CustomerSfxData>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: fe929e62bd3483d4f926936b84412103, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
