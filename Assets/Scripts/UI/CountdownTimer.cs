@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using Events;
+using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class CountdownTimer : MonoBehaviour
 {
@@ -8,8 +10,8 @@ public class CountdownTimer : MonoBehaviour
     [SerializeField] private float countdownDuration = 180f; // Default is 3 minutes (180 seconds)
     [SerializeField] private TextMeshProUGUI timerText;      // Reference to the TextMeshProUGUI component
 
-    [Header("Timer Events")]
-    public UnityEvent onTimerEnd; // Event to trigger when the timer ends
+    [FormerlySerializedAs("onTimerEnd")] [Header("Timer Events")]
+    public VoidEvent TimerEndEvent; // Event to trigger when the timer ends
 
     private float remainingTime;
     private bool isRunning;
@@ -33,7 +35,7 @@ public class CountdownTimer : MonoBehaviour
             {
                 remainingTime = 0;
                 isRunning = false;
-                onTimerEnd?.Invoke(); // Trigger the event
+                TimerEndEvent?.Raise(); // Trigger the event
             }
 
             // Update the displayed time
