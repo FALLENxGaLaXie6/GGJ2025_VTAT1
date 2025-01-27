@@ -19,7 +19,7 @@ namespace Audio
             _instance = this;
 
             // Prevent this object from being destroyed between scenes
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
     }
 }

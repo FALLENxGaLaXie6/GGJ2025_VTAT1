@@ -130,6 +130,34 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""GameOver"",
+            ""id"": ""cda04a26-2904-485d-b648-ab396c4b5bc3"",
+            ""actions"": [
+                {
+                    ""name"": ""MainMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""2770143d-6ed3-4e1f-a487-496e0aa7e597"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""cd5d26fe-d42f-4c0d-b53a-29ff4841767b"",
+                    ""path"": ""<Keyboard>/anyKey"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MainMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -141,11 +169,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Faucet_SpewBubbles = m_Faucet.FindAction("SpewBubbles", throwIfNotFound: true);
         m_Faucet_Pause = m_Faucet.FindAction("Pause", throwIfNotFound: true);
         m_Faucet_SubmitDrink = m_Faucet.FindAction("SubmitDrink", throwIfNotFound: true);
+        // GameOver
+        m_GameOver = asset.FindActionMap("GameOver", throwIfNotFound: true);
+        m_GameOver_MainMenu = m_GameOver.FindAction("MainMenu", throwIfNotFound: true);
     }
 
     ~@InputActions()
     {
         UnityEngine.Debug.Assert(!m_Faucet.enabled, "This will cause a leak and performance issues, InputActions.Faucet.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_GameOver.enabled, "This will cause a leak and performance issues, InputActions.GameOver.Disable() has not been called.");
     }
 
     public void Dispose()
@@ -281,6 +313,52 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         }
     }
     public FaucetActions @Faucet => new FaucetActions(this);
+
+    // GameOver
+    private readonly InputActionMap m_GameOver;
+    private List<IGameOverActions> m_GameOverActionsCallbackInterfaces = new List<IGameOverActions>();
+    private readonly InputAction m_GameOver_MainMenu;
+    public struct GameOverActions
+    {
+        private @InputActions m_Wrapper;
+        public GameOverActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @MainMenu => m_Wrapper.m_GameOver_MainMenu;
+        public InputActionMap Get() { return m_Wrapper.m_GameOver; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(GameOverActions set) { return set.Get(); }
+        public void AddCallbacks(IGameOverActions instance)
+        {
+            if (instance == null || m_Wrapper.m_GameOverActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_GameOverActionsCallbackInterfaces.Add(instance);
+            @MainMenu.started += instance.OnMainMenu;
+            @MainMenu.performed += instance.OnMainMenu;
+            @MainMenu.canceled += instance.OnMainMenu;
+        }
+
+        private void UnregisterCallbacks(IGameOverActions instance)
+        {
+            @MainMenu.started -= instance.OnMainMenu;
+            @MainMenu.performed -= instance.OnMainMenu;
+            @MainMenu.canceled -= instance.OnMainMenu;
+        }
+
+        public void RemoveCallbacks(IGameOverActions instance)
+        {
+            if (m_Wrapper.m_GameOverActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IGameOverActions instance)
+        {
+            foreach (var item in m_Wrapper.m_GameOverActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_GameOverActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public GameOverActions @GameOver => new GameOverActions(this);
     public interface IFaucetActions
     {
         void OnSpewWater(InputAction.CallbackContext context);
@@ -288,5 +366,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnSpewBubbles(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnSubmitDrink(InputAction.CallbackContext context);
+    }
+    public interface IGameOverActions
+    {
+        void OnMainMenu(InputAction.CallbackContext context);
     }
 }
